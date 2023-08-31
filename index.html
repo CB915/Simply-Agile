@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8" content="width=device-width, initial-scale=1.0">
+        <title>Simply Agile</title>
+        <link rel = "stylesheet" type = "text/css" href="styles.css"/>
+    </head>
+    <body>
+        <div class = "flexbox-center">
+            <div id="left_container">
+                <div class=".flex">
+                    <img src="/assests/Logo.png" alt="Simply Agile Logo">
+                    <h1>Simply Agile</h1>
+                </div>
+                <h3>Helping you simplify your agile development process.</h3>
+            </div>
+            <!--- Create Account Container -->
+            <div id="login_container" class="flex">
+                <h1>Sign Up</h1>
+                <form  method="" action="" id="sign-up-form" class="flex">
+                    <fieldset>
+                        <div>
+                            <label for="first_name">First Name</label>
+                            <input id="first_name" name = "first_name" type="text"  maxlength="30" pattern="[A-Za-z]*">
+                        </div>
+                        <div>
+                            <label for="last_name">Last Name</label>
+                            <input id="last_name" name="last_name" type="text "  maxlength="30" pattern="[A-Za-z]*">
+                         </div>
+                    </fieldset>
+                   <fieldset>
+                        <div>
+                            <label for="username">Username</label>
+                            <input id="username" name="username"  maxlength="30"pattern="[A-Za-z\d]*">
+                        </div>
+                        <div>
+                            <label for="user_email">Email</label>
+                            <input id="user_email" name="user_email" type="email"  maxlength="60">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div id = "password_container">
+                            <label for="password">Password</label>
+                            <input id="password" name="password" type="password"  minlength="7">
+                        </div>
+                        <div id = "password_container2">
+                            <label for="confirm_password">Confirm Password</label>
+                            <input id="confirm_password" name="confirm_password" type="password"  minlength="7">
+                        </div>
+                    </fieldset>
+                    <button onclick = "Validate()"id = "#submit-btn" type="submit" >Create Account</button>
+                    <h3>Already have an account? <button type = "button" class="text-button">Login</button></h3>
+
+                </form>
+            </div>
+        </div>
+        <footer>
+            <p>CB915 2023</p>
+        </footer>
+        <script>
+            const form = document.querySelectorAll('#sign-up-form input');
+            const submit = document.querySelector('#submit-btn');
+            const usrPass = document.getElementById("password");
+            const userPassConfrm = document.getElementById("confirm_password");
+                    
+
+            //Client side validation to check if passwords match (will need server side validation as well)
+            function Validate(){
+                isValid = true;
+                console.log("Submit Button clicked");
+                //loop through all items in the form, only getting the inputs
+                for(x = 0; x < form.length; x++){
+                    form[x].setAttribute("required","");
+                }
+                if(userPassConfrm.value != usrPass.value){
+                  
+                    userPassConfrm.setCustomValidity("Passwords must match");
+                    console.log(usrPass.checkValidity() + "  " + usrPass.value);
+                    console.log(userPassConfrm.checkValidity() + "  "+userPassConfrm.value);
+                    usrPass.classList.add("invalid")
+                
+                    
+                    return false;
+
+                }else{
+                    userPassConfrm.setCustomValidity("");
+                    usrPass.classList.remove("invalid");
+                }
+                // Loops through and logs the style
+                if(isValid == true){
+                    for(x = 0; x < form.length; x++){
+                    console.log(form[x].id + ":" +form[x].value);
+                }
+                    return isValid;
+                }
+            }
+       
+       </script>          
+    </body>
+</html>
+
+    

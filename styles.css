@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;500&display=swap');
+
+:root{
+    --pale-dark-blue: #4C6C9C; 
+    --dark-blue: #12317E; 
+    --small-font: 14px;
+    --large-font: 18px; 
+}
+html{
+    min-height: 100%;
+    background-image: url('/assests/landscape_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Raleway, sans-serif;
+    font-weight: lighter;
+    font-size: var(--large-font);
+    color: var(--pale-dark-blue);
+}
+body{
+    background-color: rgba(83, 198, 255, 0.305);
+    display: flex;
+    flex-flow: nowrap column;
+    min-height: 100vh;
+    margin: 0;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    flex-flow: nowrap column;
+}
+
+.text-button{
+    border: none;
+    background: none;
+    display: inline;
+    padding: 0;
+    margin: 0;
+    font-size: 22px;
+    text-decoration: underline;
+    color: var(--pale-dark-blue);
+}
+
+.flexbox-center{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    min-width: 700px;
+    flex-wrap: wrap;
+    min-height: 80vh;
+    align-items: stretch;
+}
+
+#left_container{
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    width: 300px;
+    text-align: center;
+    flex-grow: 1;
+    padding: 20px;
+    border-radius: 5px  0 0 5px;
+}
+img{
+    max-width: 80px; /* MR */
+}
+p{
+    color: var(--pale-dark-blue);
+    font-family: Raleway , sans-serif;
+    word-wrap: normal;
+    font-size: var(--small-font);
+}
+
+
+#login_container{
+    background-color: white;
+    width: 500px;
+    display: flex;
+    padding: 16px;
+    flex-grow: 1;
+    justify-content: center;
+    border-radius: 0 5px 5px 0;
+}
+#sign-up-form{
+    appearance: none;
+    box-sizing: border-box;
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    padding: 16px;
+}
+fieldset{
+    border: none;
+    padding: 0%;
+    margin: 8px;
+    width: 100%;
+    appearance: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1 1 0;
+}
+fieldset>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: nowrap column;
+    font-size: var(--small-font);
+
+}
+button{
+    background-color: var(--dark-blue);
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 24px;
+}
+
+input{
+    border-radius: 10px;
+    border: solid var(--pale-dark-blue) 1px;
+    padding-right: 2px;
+    padding: 3px;
+    padding-left: 10px;
+}
+input:focus, input:valid{
+    outline-color: var(--dark-blue);
+}
+input:invalid, input.invalid{
+    outline-color: red;
+    border-color: red;
+}
+
+footer{
+    background-color: #12317E;
+    margin-top: auto;
+}
+footer>p{
+    text-align: center;
+    color: white;
+}
+/* Error text for form */
+.password_container>p{
+    color: red;
+}
