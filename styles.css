@@ -8,46 +8,41 @@
 }
 html{
     min-height: 100%;
-    background-image: url('/assests/landscape_bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    text-align: center;
     font-family: Raleway, sans-serif;
     font-weight: lighter;
     font-size: var(--large-font);
     color: var(--pale-dark-blue);
 }
 body{
-    background-color: rgba(83, 198, 255, 0.305);
+    background-image: url('/assests/landscape_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     flex-flow: nowrap column;
     min-height: 100vh;
     margin: 0;
 }
+
 .flex{
     display: flex;
     align-items: center;
     flex-flow: nowrap column;
 }
 
-.text-button{
-    border: none;
-    background: none;
-    display: inline;
-    padding: 0;
-    margin: 0;
-    font-size: 22px;
-    text-decoration: underline;
+a{
     color: var(--pale-dark-blue);
 }
 
 .flexbox-center{
-    margin: auto;
     display: flex;
+    margin: auto;
     justify-content: center;
-    min-width: 700px;
     flex-wrap: wrap;
     min-height: 80vh;
+    max-width: 80%;
+    min-width: fit-content;
     align-items: stretch;
 }
 
@@ -72,31 +67,32 @@ p{
     font-size: var(--small-font);
 }
 
-
 #login_container{
     background-color: white;
-    width: 500px;
     display: flex;
     padding: 16px;
-    flex-grow: 1;
+    flex-grow: 2;
     justify-content: center;
     border-radius: 0 5px 5px 0;
 }
-#sign-up-form{
-    appearance: none;
+#sign-up-form, #login-form{
     box-sizing: border-box;
     display: flex;
-    width: 80%;
     justify-content: space-evenly;
     padding: 16px;
 }
+#login-form{
+    flex-grow: 0.3;
+    
+}
 fieldset{
+    display: flex;
+    flex-flow: wrap row;
     border: none;
     padding: 0%;
     margin: 8px;
     width: 100%;
     appearance: none;
-    display: flex;
     justify-content: space-evenly;
     flex: 1 1 0;
 }
@@ -106,7 +102,6 @@ fieldset>div{
     align-items: center;
     flex-flow: nowrap column;
     font-size: var(--small-font);
-
 }
 button{
     background-color: var(--dark-blue);
@@ -120,7 +115,6 @@ button{
 input{
     border-radius: 10px;
     border: solid var(--pale-dark-blue) 1px;
-    padding-right: 2px;
     padding: 3px;
     padding-left: 10px;
 }
@@ -144,3 +138,14 @@ footer>p{
 .password_container>p{
     color: red;
 }
+
+body>div{
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(82, 197, 255, 0.4);
+}
+
+/* Login Page Styling */
+
