@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <meta charset="UTF-8" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" type = "text/css" href="styles.css"/>
+        <link rel="icon" type="image/x-icon" href="./assets/Logo.png">
+        <script src="script.js" type="text/javascript" defer></script>
+    </head>
+    <body id = "dashboard-body">
+        <div id = "dashboard-container" class="flex">
+            <div class= "banner flex">
+            </div>
+            <div class="dashboard-content">
+                <div id="menu" class="flex">
+                    <div id = "logo-container">
+                        <img src="./assets/Logo.png" alt="Simply Agile Logo">
+                        <h3>Simply Agile</h3>
+                    </div>
+                    <div id = "menu-content">
+                        <h3>Hello User</h3>
+                        <ul>
+                            <li><p>Home</p></li>
+                            <li><p>Account Settings</p></li>
+                        </ul>
+                        <a style = "text-decoration: none" href = "index.html"><p>Log out</p></a>
+                    </div>
+                </div>
+                <div id = "content">
+                    <div class = "fixed">
+                        <h2>Dashboard</h2>
+                        <div>
+                            <h4>Pick up where you left off.</h4>
+                            <h3 id ="current-date">here</h3>
+                        </div>
+                    </div>
+                    <div class="grid-container">
+                        <div style = "grid-area: 1 / 1 / 2 / 4" class="grid-item-block">
+                           <div>
+                            <h1>2</h1>
+                            <h3>Projects</h3>
+                           </div>
+                           <div>
+                            <h1>7</h1>
+                            <h3>Total Tasks</h3>
+                           </div>
+                           <div>
+                            <h1>1</h1>
+                            <h3>Teams</h3>
+                           </div>
+                        </div>
+                        <div style = "grid-column: 1 / span 2"class="grid-item">
+                            <div id = "project-list-label">
+                                <h3>Projects</h3>
+                                <button>+</button>
+                            </div>
+                            <div id = "project-item">
+                                <h1>Project Title</h1>
+                                <div>
+                                    <h3>This is the project description.</h3>
+                                    <p>Team Lead</p>
+                                    <p>Task Status</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style = "grid-area: 2 / 3 / 4 / 4" class="grid-item">
+                            <h3>Upcoming Tasks</h3>
+                            <div id = "tasks-list" class="flex">
+                                <input type="checkbox">
+                                <div>
+                                    <h3>Task Title:</h3>
+                                    <p>Project:</p>
+                                    <p>Due date:</p>
+                                </div>
+                            </div>
+
+                        
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <footer>
+            <p>CB915 2023</p>
+        </footer>   
+    </body>
+</html>

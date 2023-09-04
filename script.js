@@ -35,3 +35,8 @@ function Validate(){
         return isValid;
     }
 }
+
+// Script for Dashboard and sending data to server
+const date = new Date().toLocaleDateString();
+document.getElementById("current-date").innerHTML = date;
+console.log();
