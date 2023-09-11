@@ -5,12 +5,12 @@
         <title>Simply Agile</title>
         <link rel = "stylesheet" type = "text/css" href="styles.css"/>
         <link rel="icon" type="image/x-icon" href="./assets/Logo.png">
-        <script type="text/javascript" src = "script.js"></script>
+        <script type="text/javascript" src = "script.js" defer></script>
 
     </head>
         <!-- Login  Page -->
-        <body>
-            <div>
+        <body >
+            <div class ="login-body" style = "padding: 16px;">
             <div class = "flexbox-center">
                 <div id="left_container">
                     <div class="flex">
@@ -31,8 +31,8 @@
                                 <label for="login-password">Password</label>
                                 <input id="login-password" name="login-password" type="text"  maxlength="30" pattern="[A-Za-z]*">
                              </div>
-
-                        <button onclick = "Login()"id = "#submit-btn" type="submit" >Create Account</button>
+                            <!-- Button should e of type submit -->
+                        <button onclick = "Login()"id = "login-btn" type="button" >Create Account</button>
                         <h3>Don't have an acount? Create one.<br> <a href = "signup.html">Sign Up</a></h3>
     
                     </form>

@@ -21,6 +21,8 @@ function Validate(){
         console.log(usrPass.checkValidity() + "  " + usrPass.value);
         console.log(userPassConfrm.checkValidity() + "  "+userPassConfrm.value);
         usrPass.classList.add("invalid")
+        
+        isValid = false;
         return false;
 
     }else{
@@ -31,8 +33,25 @@ function Validate(){
     if(isValid == true){
         for(x = 0; x < form.length; x++){
         console.log(form[x].id + ":" +form[x].value);
+        console.log(isValid);
     }
-        return isValid;
+    }
+    console.log(isValid);
+    return isValid;
+}
+
+
+/* Login Page */
+
+const loginForm = document.getElementById('#login-form');
+const loginBtn = document.getElementById('#login-btn');
+
+function Login(){
+    // Validate the credentials
+    let validLogin = true;
+    // Link  to the proper page when server side validation is completed
+    if(validLogin == true){
+        location.href = "dashboard.html";
     }
 }
 
