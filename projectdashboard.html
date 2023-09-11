@@ -17,62 +17,63 @@
                         <h3>Simply Agile</h3>
                     </div>
                     <ul>
-                        <li>Account Settings</li>
-                        <li><a href = "dashboard.html">Home</a></li>
+                        <li><a style="text-decoration: none;" href = "settings.html">Account Settings</a></li>
+                        <li><a style="text-decoration: none;" href = "dashboard.html">Home</a></li>
                     </ul>
-                    <h4>Log out</h4>
+                    <a style = "text-decoration: none ;" href = "index.html"><h4>Log out</h4></a>
                 </div>
-                <div class = "main">
+                <div class = "main-project">
                     <div class="main-header">
-                        <h1>Project: Web Application</h1>
+                        <h2>Project: Web Application</h2>
                         <div class="seperate-text">
                             <h4 style = " margin-right: 64px; text-align: left; max-width: 60ch;">This is a short description 
                                 of the project details, including information about the project. This description
                                 is currently just filler text to show that a long block of text will fit here just fine.
                             </h4>
-                            <h4 id ="current-date">DATE</h4>
+                            <h4 id ="current-date"></h4>
                         </div>
                     </div>
-                    <div class="main-container">
-                        <div>2 Projects</div>
-                        <div>7 Total Tasks</div>
-                        <div>3 Teams</div>
+                    <div class="main-container-color">
+                        <div>2 Tasks</div>
+                        <div>1 Resource</div>
+                        <div>3 Members</div>
                     </div>
-                    <div id = "projects">
+                    <div class = "main-container-side">
+                        <div>
+                            <h4>Project Details</h4>
+                            <h4>Date - Date</h4>
+                        </div>
+                    </div>
+                    <div class = "main-list">
                         <div class = "seperate-text">
-                            <h3>Projects</h3>
+                            <h3>Tasks</h3>
                             <h2>+</h2>
                         </div>
-                        <div class ="container-outlined">
-                            <h4>Web Application Project</h4>
-                            <h6>This is the description of the project.</h6>
-                            <p>Team Lead: User1</p>
-                            <p>Task Status: 3/6</p>
+                        <div class ="container-small">
+                            <div class="flex-row">
+                                <h4>Task Title: Task One</h4>  
+                                <button type="button" class="button-text">
+                                    <h4 style="text-align: right;">x</h4>
+                                </button>
+
+                            </div>
+                            <h6>This is the description of the the task.</h6>
+                            <p>Due Date: DATE</p>
                         </div>
-                       
-                       
                     </div>
-                    <div id = "main-side">
-                        <h3>Upcoming Tasks</h3>
+                    <div id = "main-side-small">
+                        <h3>Resources</h3>
                         <div class = "list-container">
-                            <div>
-                                <input type="checkbox" name = "checkbox" class="list-checkbox">
-                                <div>
-                                    <h4>Task Title: Title Name that is long</h4>
-                                    <p>Project: Project Name</p>
-                                    <p>Due Date: DATE</p>
+                            <div class = "flex">
+                                <div style = "width: 100%; padding: 0;" class="flex-row">
+                                    <h4>Resource Label</h4>
+                                    <button class="button-text">
+                                        <h4 style="align-self: end;">x</h4>
+                                    </button>
                                 </div>
-                               
-                            </div>
-                            <div>
-                                <input type="checkbox" name = "checkbox" class="list-checkbox">
-                                <div>
-                                    <h4>Task Title: Title</h4>
-                                    <p>Project: Project Name</p>
-                                    <p>Due Date: DATE</p>
-                                </div>
-                               
-                            </div>
+                                <p>Link to resource</p>
+                                <p>Simply-Agile.com</p>
+                            </div>                           
                         </div>
                     </div>
                 </div>
@@ -81,6 +82,5 @@
                 <p>CB915 2023</p>
             </footer>   
         </div>
-    </body>
-    
+    </body>   
 </html>

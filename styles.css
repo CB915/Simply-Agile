@@ -40,10 +40,14 @@ body>div{
     background-color: rgba(82, 197, 255, 0.4);
 }
 
-.flex{
+.flex, .flex-row{
     display: flex;
     align-items: center;
     flex-flow: nowrap column;
+}
+.flex-row{
+    justify-content: space-between;
+    flex-direction: row;
 }
 .flex-center{
     display: flex;
@@ -135,6 +139,12 @@ button{
     margin: 24px 0px;
 }
 
+.button-text{
+    padding: 4px 8px;
+    margin: 0;
+    background-color: white;
+}
+
 input{
     border-radius: 10px;
     border: solid var(--pale-dark-blue) 1px;
@@ -196,10 +206,9 @@ footer>p{
 
 }
 .header-2{
-    background: url(./assets/Landscape-orange.jpg) no-repeat top center ;
-    background-position: 65% 17%;
-    grid-area: 1/1/3/2;
-
+    background: url(./assets/Landscape-2.jpg) no-repeat top center ;
+    background-size:cover;
+    background-position: 20% 30%;
 }
 
 .sidebar{
@@ -223,13 +232,13 @@ li{
     font-weight: bold;
 }
 
-.main{
+.main, .main-project{
     display: grid;
     padding: 16px;
     background-color: white;
     gap: 16px;
     flex-grow: 4;
-    grid: min-content 100px 300px / 1fr 1fr;
+    grid: min-content 0.1fr 1fr / 1.5fr 1fr;
 }
 
 .main>div>h1{
@@ -241,7 +250,6 @@ li{
     display: flex;
     flex-wrap: wrap;
     border-radius: 20px 20px 0 0 ;
-    overflow: hidden;
 
 }
 .main-header{
@@ -249,18 +257,23 @@ li{
     padding: 16px;
 }
 
+.main-header div{
+    margin-top: 16px ;
+    display: flex;
+    flex-wrap: wrap;
+}
 
-.main-container{
+.main-container,.main-container-color{
     display: grid;
     gap: 16px;
     padding: 16px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-area: 2/1/2/2;
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    grid-area: 2/1/3/2;
     align-items: stretch;
     justify-items: stretch;
 }
 
-.main-container div{
+.main-container div, .main-container-color div{
     background-color: rgb(43, 152, 255);
     display: grid;
     font-size: var(--large-font);
@@ -272,18 +285,16 @@ li{
 }
 
 
-#projects {
+.main-list{
     padding: 16px;
     grid-row: 3;
     display: grid;
     gap: 16px;
     grid-template-rows: min-content;
     align-content: start;
-    overflow-y: scroll;
-
 }
 
-.container-outlined{
+.container-outlined, #main-side-small .list-container > div {
     text-align: left;
     background-color: white;
     border: #12317E solid 1px;
@@ -299,7 +310,6 @@ li{
 #main-side {
     text-align: left;
     grid-area: 2/2/4/3;
-    overflow-y: scroll;
 }
 
 .list-container{
@@ -327,7 +337,78 @@ li{
 
 }
 
+/* project dashboard */
 
+.main-project{
+    grid: min-content 0.1fr 1fr / 1fr 1fr;
+    text-align: left;
+}
+
+.main-container-side{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px ;
+    border-radius: 8px;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    grid-area: 2/2/3/3;
+    width: 50%;
+}
+
+.main-container-side div *{
+    color: var(--pale-dark-blue);
+}
+
+.main-container-color{
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(50px,100px));
+    color: #12317E;
+
+}
+.main-container-color div{
+    max-width: 100px;
+}
+
+.main-container-color div:nth-child(2),.main-container-color div:nth-child(3){
+    background-color: rgb(255, 191, 43);
+    color: #12317E;
+}
+.main-container-color div:nth-child(3){
+    background-color: rgb(130, 230, 228);
+}
+
+.container-small{
+    background-color: rgb(209, 244, 244);
+    padding: 16px;
+}
+.container-small *{
+    color: var(--pale-dark-blue);
+}
+
+#main-side-small{
+    text-align: left;
+    grid-area: 3/2/4/3;
+    padding: 16px;
+}
+
+#main-side-small .list-container div {
+    align-items: start;
+}
+
+
+/* Setting Page */
+
+#main-settings{
+    display: flex;
+    background-color: white;
+    justify-content: start;
+    flex-direction: column;
+    flex-grow: 5;
+}
 @media only screen and (max-width: 600px) {
     .main{
         display: grid;
@@ -335,9 +416,13 @@ li{
         gap: 16px;
         flex-grow: 4;
         grid: min-content min-content 0.5fr / 100% ;
+        grid-auto-rows: min-content;
+    }
+    .main-project{
+        grid-template-columns: 1fr;
     }
 
-    #projects{
+    .main-list{
         grid-row: 4/4;
     }
     #main-side{
@@ -345,7 +430,14 @@ li{
         overflow: visible;
     }
 
+
     .main-header{
         grid-area: 1/1/1/1;
+    }
+    .main-container-side{
+        grid-area: 3/1/4/1;
+    }
+    #main-side-small{
+        grid-area: 5/1/6/1;
     }
 }
